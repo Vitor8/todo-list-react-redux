@@ -25,7 +25,11 @@ const todolist = (state = INITIAl_STATE, action) => {
     };
 
   case 'FINISH_TASK':
-    return state;
+    const updateTasksTodo = state.tasksTodo.filter((task) => task.id != action.payload.id);
+    return {
+      tasksTodo: updateTasksTodo,
+      tasksDone: [...state.tasksDone, action.payload]
+    };
 
   case 'UPDATE_TASK':
     return state;
