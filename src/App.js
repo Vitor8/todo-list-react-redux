@@ -1,20 +1,13 @@
-import TasksToDo from './components/TasksToDo';
-import TasksDone from './components/TasksDone';
-import UpdateTask from './components/UpdateTask';
-import { connect } from 'react-redux';
 import './css/Home.css';
+import { Route, Switch } from 'react-router-dom';
+import Home from './pages/Home';
 
-function App({ taskBeingUpdated }) {
+function App() {
   return (
-    <div className="home-container" >
-      { taskBeingUpdated ? <UpdateTask /> : <TasksToDo /> }
-      <TasksDone />
-    </div>
+    <Switch>
+      <Route exact path="/" component={ Home } />
+    </Switch>
   );
 }
 
-const mapStateToProps = (state) => ({
-  taskBeingUpdated: state.todolist.taskBeingUpdated,
-});
-
-export default connect(mapStateToProps)(App);
+export default App;
