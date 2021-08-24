@@ -1,7 +1,7 @@
 - Projeto que simula uma lista de tarefas.
 - A aplicação foi feita em React, e o estado global da aplicação é manipulado com Redux.
 - O código faz manipulações básicas de CRUD (CREATE, READ, UPDATE e DELETE).
-- Logo o usuário pode:
+- Logo, o usuário pode:
   - Acrescentar Tarefa
   - Finalizar Tarefa
   - Deletar Tarefa
