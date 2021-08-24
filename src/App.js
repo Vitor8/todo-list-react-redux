@@ -1,14 +1,20 @@
-import './App.css';
 import TasksToDo from './components/TasksToDo';
 import TasksDone from './components/TasksDone';
+import UpdateTask from './components/UpdateTask';
+import { connect } from 'react-redux';
+import './css/Home.css';
 
-function App() {
+function App({ taskBeingUpdated }) {
   return (
-    <div className="App">
-      <TasksToDo />
+    <div className="home-container" >
+      { taskBeingUpdated ? <UpdateTask /> : <TasksToDo /> }
       <TasksDone />
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+  taskBeingUpdated: state.todolist.taskBeingUpdated,
+});
+
+export default connect(mapStateToProps)(App);

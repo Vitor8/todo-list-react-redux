@@ -1,0 +1,16 @@
+.task-card-button {
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 2px;
+  background-color: wheat;
+}
+
+.task-card-button:hover {
+  background-color: tomato;
+}
+
+.task-card-textTask {
+  font-size: 15px;
+}

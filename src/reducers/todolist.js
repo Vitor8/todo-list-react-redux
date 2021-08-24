@@ -3,6 +3,8 @@
 const INITIAl_STATE = {
   tasksTodo: [],
   tasksDone: [],
+  taskToUpdate: {},
+  taskBeingUpdated: false,
 };
 
 const todolist = (state = INITIAl_STATE, action) => {
@@ -31,8 +33,32 @@ const todolist = (state = INITIAl_STATE, action) => {
       tasksDone: [...state.tasksDone, action.payload]
     };
 
+  case 'PREPARE_TO_UPDATE_TASK':
+    return {
+      ...state,
+      taskToUpdate: action.payload,
+      taskBeingUpdated: true,
+    }
+
   case 'UPDATE_TASK':
-    return state;
+    const newObjectUpdatedTask = {
+      id: action.payload.id,
+      textTask: action.payload.textTask,
+    }
+    let positionToUpdate = null;
+    state.tasksTodo.forEach((task, index) => {
+      if (task.id === action.payload.id) {
+        positionToUpdate = index;
+      }
+    })
+    const tasksTodoUpdated = [...state.tasksTodo];
+    tasksTodoUpdated[positionToUpdate] = newObjectUpdatedTask;
+    return {
+      ...state,
+      tasksTodo: tasksTodoUpdated,
+      taskToUpdate: {},
+      taskBeingUpdated: false,
+    }
 
   default:
     return state;

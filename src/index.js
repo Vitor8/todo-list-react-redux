@@ -2,11 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import store from './store';
-
+import './css/Home.css';
 
 ReactDOM.render(
   <Provider store={ store }>
@@ -15,8 +14,7 @@ ReactDOM.render(
         <App />
       </BrowserRouter>
     </React.StrictMode>
-  </Provider>
-  ,
+  </Provider>,
   document.getElementById('root')
 );
 

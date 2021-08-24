@@ -14,6 +14,11 @@ export const finishTask = (task) => ({
   payload: task,
 });
 
+export const prepareToUpdateTask = (task) => ({
+  type: 'PREPARE_TO_UPDATE_TASK',
+  payload: task,
+});
+
 export const updateTask = (task) => ({
   type: 'UPDATE_TASK',
   payload: task,

@@ -1,0 +1,67 @@
+.home-container {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgb(236, 173, 56);
+  height: 700px;
+}
+
+.tasks-to-do-container {
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+}
+
+.tasks-to-do-context {
+  width: 200px;
+  padding: 15%;
+  border: 1px solid black;
+  border-radius: 1%;
+  box-shadow: 2px 2px rgb(29, 27, 27);
+}
+
+.tasks-to-do-context:hover {
+  box-shadow: 4px 4px rgb(29, 27, 27);
+}
+
+.tasks-to-do-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.task-to-do-input {
+  width: 97%;
+  height: 40px;
+  background-color: wheat;
+}
+
+.task-to-do-input:hover {
+  background-color: rgb(221, 152, 140);
+}
+
+.tasks-to-do-button-add-task {
+  width: 100%;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  background-color: wheat;
+}
+
+.tasks-to-do-button-add-task:hover {
+  background-color: tomato;
+}
+
+.tasks-to-do-button-update-task {
+  margin-top: 5%;
+  width: 100%;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  background-color: wheat;
+}
+
+.tasks-to-do-button-update-task:hover {
+  background-color: tomato;
+}
