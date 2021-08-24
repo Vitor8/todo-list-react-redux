@@ -8,7 +8,10 @@ const INITIAl_STATE = {
 const todolist = (state = INITIAl_STATE, action) => {
   switch (action.type) {
   case 'ADD_TASK':
-    return state;
+    return {
+      ...state,
+      tasksTodo: [...state.tasksTodo, action.payload ]
+    };
 
   case 'REMOVE_TASK':
     return state;
