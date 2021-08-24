@@ -12,7 +12,7 @@
 
 - Para baixar o código, siga o passo a passo abaixo:
   - Fork o projeto.
-  - Clone o repositório -> git@github.com:Vitor8/todo-list-react-redux.git
+  - Clone o repositório -> git clone git@github.com:Vitor8/todo-list-react-redux.git
   - Instale as seguintes dependências:
     - npm install --save react-router-dom
     - npm install --save redux react-redux
