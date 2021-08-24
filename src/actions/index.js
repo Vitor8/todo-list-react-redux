@@ -4,9 +4,9 @@ export const addTask = (task) => ({
   payload: task,
 });
 
-export const removeTask = (task) => ({
+export const removeTask = (taskId) => ({
   type: 'REMOVE_TASK',
-  payload: task,
+  payload: taskId,
 });
 
 export const finishTask = (task) => ({

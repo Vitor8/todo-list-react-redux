@@ -6,11 +6,16 @@ import * as tasksActions from '../actions/index';
 function TasksToDo({ addTask }) {
   const [newTask, setNewTask] = useState('');
 
+  function updateListTask() {
+    addTask(newTask);
+    setNewTask('');
+  }
+
   return (
     <div className="tasks-to-do-container">
       <h3>Tasks To-Do</h3>
-      <input type="text" onChange={ (e) => setNewTask(e.target.value) } />
-      <button onClick={ () => addTask(newTask) }>Acrescentar Tarefa</button>
+      <input type="text" value={ newTask } onChange={ (e) => setNewTask(e.target.value) } />
+      <button onClick={ () => updateListTask() }>Acrescentar Tarefa</button>
       <TodoList />
     </div>
   )
