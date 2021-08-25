@@ -1,5 +1,8 @@
 - Projeto que simula uma lista de tarefas.
 - A aplicação foi feita em React, e o estado global da aplicação é manipulado com Redux.
+
+Link GitHug Pages: vitor8.github.io/todo-list-react-redux/
+
 - O código faz manipulações básicas de CRUD (CREATE, READ, UPDATE e DELETE).
 - Logo, o usuário pode:
   - Acrescentar Tarefa
